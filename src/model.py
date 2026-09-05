@@ -102,6 +102,11 @@ def _select_threshold(y_val, probs, target_precision: float):
 
 
 def train(df: pd.DataFrame, test_size: float = 0.2, seed: int = 42, target_precision: float = DEFAULT_TARGET_PRECISION) -> dict:
+    # Created up front, not lazily -- feature_baselines.json (below) is
+    # written well before the later artifact-saving block, and a fresh
+    # clone/container has no reports/ directory yet.
+    ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
+
     X = build_features(df)
     y = df["disputed"].astype(int)
 
@@ -213,7 +218,6 @@ def train(df: pd.DataFrame, test_size: float = 0.2, seed: int = 42, target_preci
         "selected_hyperparameters": best_params,
     }
 
-    ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(clf, MODEL_PATH)
     with open(THRESHOLDS_PATH, "w", encoding="utf-8") as f:
         json.dump(
