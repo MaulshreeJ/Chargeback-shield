@@ -1,0 +1,70 @@
+{
+  "model_version": "v1-histgb",
+  "baseline": {
+    "rule": "flag if digital_no_delivery == 1 (digital good, no delivery confirmation)",
+    "precision": 0.25595238095238093,
+    "recall": 0.2388888888888889
+  },
+  "test_set_size": 4000,
+  "dispute_rate_test_set": 0.09,
+  "operating_threshold": 0.20374552974083385,
+  "precision": 0.4,
+  "recall": 0.40555555555555556,
+  "pr_auc": 0.35858815102428904,
+  "roc_auc": 0.7836366758241758,
+  "confusion_matrix": [
+    [
+      3421,
+      219
+    ],
+    [
+      214,
+      146
+    ]
+  ],
+  "note": "Computed on a held-out test split never used for training or hyperparameter selection (those used a separate validation fold). All data is synthetic -- see src/data_gen.py.",
+  "operating_points": [
+    {
+      "recall_floor": 0.2,
+      "achieved_recall": 0.2,
+      "precision": 0.541,
+      "threshold": 0.3678
+    },
+    {
+      "recall_floor": 0.4,
+      "achieved_recall": 0.4,
+      "precision": 0.411,
+      "threshold": 0.208
+    },
+    {
+      "recall_floor": 0.6,
+      "achieved_recall": 0.606,
+      "precision": 0.258,
+      "threshold": 0.1117
+    },
+    {
+      "recall_floor": 0.8,
+      "achieved_recall": 0.811,
+      "precision": 0.166,
+      "threshold": 0.0577
+    }
+  ],
+  "target_precision_used": 0.4,
+  "cost_based_operating_point": {
+    "assumed_false_positive_cost": 5.0,
+    "assumed_false_negative_cost": "full disputed amount (conservative: no recovery assumed)",
+    "threshold": 0.0185,
+    "precision": 0.09,
+    "recall": 1.0,
+    "expected_cost_on_test_fold": 18140.0,
+    "expected_cost_at_shipped_threshold": 112033.13,
+    "expected_cost_if_never_flagging": 243567.07,
+    "note": "An alternative operating point that minimizes total assumed cost directly, instead of targeting a precision floor. Not the shipped default -- see operating_threshold above for what the API actually uses."
+  },
+  "selected_hyperparameters": {
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "l2_regularization": 0.5,
+    "max_iter": 300
+  }
+}

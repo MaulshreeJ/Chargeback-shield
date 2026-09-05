@@ -1,0 +1,15 @@
+{
+  "amount": 394.6,
+  "ticket_size_ratio": 1.0,
+  "customer_txn_count_90d": 1.0,
+  "customer_dispute_count_lifetime": 0.0,
+  "customer_refund_count_90d": 0.0,
+  "is_subscription": 0.0,
+  "delivery_confirmed": 1.0,
+  "cross_border": 0.0,
+  "hour_of_day": 11.5,
+  "days_to_deliver": 4.95,
+  "digital_no_delivery": 0.0,
+  "merchant_dispute_rate_90d": 0.1,
+  "merchant_txn_count_90d": 12.0
+}

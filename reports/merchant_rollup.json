@@ -1,0 +1,131 @@
+{
+  "min_volume_threshold": 20,
+  "total_merchants": 60,
+  "merchants_meeting_threshold": 60,
+  "overall_dispute_rate": 0.09,
+  "highest_risk_merchants": [
+    {
+      "merchant_id": "MERC0057",
+      "txn_count": 324,
+      "dispute_count": 55,
+      "dispute_rate": 0.1698,
+      "avg_amount": 487.18,
+      "top_reason_code": "NOT_AS_DESCRIBED"
+    },
+    {
+      "merchant_id": "MERC0041",
+      "txn_count": 336,
+      "dispute_count": 54,
+      "dispute_rate": 0.1607,
+      "avg_amount": 486.96,
+      "top_reason_code": "SUBSCRIPTION_CANCELLED"
+    },
+    {
+      "merchant_id": "MERC0008",
+      "txn_count": 344,
+      "dispute_count": 50,
+      "dispute_rate": 0.1453,
+      "avg_amount": 486.03,
+      "top_reason_code": "UNAUTHORIZED_TRANSACTION"
+    },
+    {
+      "merchant_id": "MERC0031",
+      "txn_count": 319,
+      "dispute_count": 46,
+      "dispute_rate": 0.1442,
+      "avg_amount": 478.32,
+      "top_reason_code": "NOT_AS_DESCRIBED"
+    },
+    {
+      "merchant_id": "MERC0040",
+      "txn_count": 333,
+      "dispute_count": 48,
+      "dispute_rate": 0.1441,
+      "avg_amount": 456.87,
+      "top_reason_code": "PRODUCT_NOT_RECEIVED"
+    },
+    {
+      "merchant_id": "MERC0010",
+      "txn_count": 316,
+      "dispute_count": 45,
+      "dispute_rate": 0.1424,
+      "avg_amount": 517.67,
+      "top_reason_code": "UNAUTHORIZED_TRANSACTION"
+    },
+    {
+      "merchant_id": "MERC0033",
+      "txn_count": 316,
+      "dispute_count": 43,
+      "dispute_rate": 0.1361,
+      "avg_amount": 507.14,
+      "top_reason_code": "SUBSCRIPTION_CANCELLED"
+    },
+    {
+      "merchant_id": "MERC0027",
+      "txn_count": 350,
+      "dispute_count": 47,
+      "dispute_rate": 0.1343,
+      "avg_amount": 507.59,
+      "top_reason_code": "SUBSCRIPTION_CANCELLED"
+    },
+    {
+      "merchant_id": "MERC0030",
+      "txn_count": 333,
+      "dispute_count": 44,
+      "dispute_rate": 0.1321,
+      "avg_amount": 506.2,
+      "top_reason_code": "NOT_AS_DESCRIBED"
+    },
+    {
+      "merchant_id": "MERC0015",
+      "txn_count": 321,
+      "dispute_count": 42,
+      "dispute_rate": 0.1308,
+      "avg_amount": 491.73,
+      "top_reason_code": "NOT_AS_DESCRIBED"
+    }
+  ],
+  "lowest_risk_merchants": [
+    {
+      "merchant_id": "MERC0004",
+      "txn_count": 323,
+      "dispute_count": 10,
+      "dispute_rate": 0.031,
+      "avg_amount": 495.8,
+      "top_reason_code": "PRODUCT_NOT_RECEIVED"
+    },
+    {
+      "merchant_id": "MERC0025",
+      "txn_count": 379,
+      "dispute_count": 13,
+      "dispute_rate": 0.0343,
+      "avg_amount": 477.51,
+      "top_reason_code": "PRODUCT_NOT_RECEIVED"
+    },
+    {
+      "merchant_id": "MERC0059",
+      "txn_count": 356,
+      "dispute_count": 13,
+      "dispute_rate": 0.0365,
+      "avg_amount": 458.38,
+      "top_reason_code": "SUBSCRIPTION_CANCELLED"
+    },
+    {
+      "merchant_id": "MERC0044",
+      "txn_count": 353,
+      "dispute_count": 13,
+      "dispute_rate": 0.0368,
+      "avg_amount": 502.27,
+      "top_reason_code": "SUBSCRIPTION_CANCELLED"
+    },
+    {
+      "merchant_id": "MERC0047",
+      "txn_count": 324,
+      "dispute_count": 12,
+      "dispute_rate": 0.037,
+      "avg_amount": 462.52,
+      "top_reason_code": "NOT_AS_DESCRIBED"
+    }
+  ],
+  "note": "Computed over the full synthetic transaction history (src/data_gen.py), filtered to merchants with at least 20 transactions to avoid noisy small-sample dispute rates. This is an operational monitoring view, not the leakage-safe per-transaction feature the model trains on -- see merchant_dispute_rate_90d in src/features.py for that."
+}
