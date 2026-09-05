@@ -197,6 +197,8 @@ gap worth hiding.
 
 ## Pitch video
 
-See `PITCH_SCRIPT.md` for the full timed 5-minute script (screen-direction
-cues, live-demo beats using the deployed URL above, and a recording
-checklist) used for the buildathon submission.
+🎥 **Watch:** https://drive.google.com/file/d/1ZYhb1Lmuo5MPRlsu_crn-9GufRUUgxJN/view?usp=sharing
+
+See `PITCH_SCRIPT.md` for the full timed script (screen-direction cues,
+live-demo beats using the deployed URL above, and a recording checklist)
+used for the buildathon submission.
